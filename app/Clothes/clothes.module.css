@@ -1,0 +1,60 @@
+.im {
+  width: 240px;
+  height: 230px;
+}
+
+.card {
+  width: 300px;
+  height: 380px;
+  padding: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 41px;
+  background: #7384;
+  box-shadow: 15px 15px 30px #989898, -15px -15px 30px #2d1e2f;
+  animation: fadeUp 1s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;  
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card:hover {
+  transform: scale(1.04);
+  transition: 0.3s;
+}
+
+.ll {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.btn {
+  margin-top: auto;
+  height: 40px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  background-color: rgb(102, 3, 195);
+  transition: 0.3s;
+  color: white;
+  border: 1px solid white;
+}
