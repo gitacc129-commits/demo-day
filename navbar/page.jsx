@@ -4,9 +4,12 @@ import st from "./navbar.module.css";
 import { React } from "react";
 
 import { useTheme } from "@/app/ThemeContext/page";
+import { useCart } from "@/app/Cart-Context/page";
 
 function Navbar() {
   const { dark, toggleTheme } = useTheme();
+
+  const { cart } = useCart();
 
   return (
     <div className={`${st.div} ${dark ? st.dark : ""}`}>
@@ -24,6 +27,7 @@ function Navbar() {
         <li>
           <Link href="/About">About us</Link>
         </li>
+        <Link href="/cart">🛒 Cart</Link>
 
         <button onClick={toggleTheme} className={st.btn}>
           {dark ? "☀️" : "🌙"}

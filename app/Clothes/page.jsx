@@ -30,7 +30,7 @@ function Contact() {
           <h1>{clothes.description}</h1>
           <h3>{clothes.price}</h3>
           <button onClick={touched} className={cs.btn}>
-            Buy now
+            Buy nows
           </button>
         </div>
       ))}
