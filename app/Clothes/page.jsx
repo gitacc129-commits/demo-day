@@ -1,15 +1,12 @@
 "use client";
 
+import { useCart } from "../Cart-Context/page";
 import cs from "./clothes.module.css";
-
 import { useEffect, useState } from "react";
 
 function Contact() {
   const [clothes, setClothes] = useState([]);
-
-  function touched() {
-    alert("Buyurtma Muvafaqqiyatli amalga oshirildi ✅");
-  }
+  const { addToCart } = useCart();
 
   async function getClothes() {
     const res = await fetch("https://b738f4d79f1c934b.mokky.dev/Clothes");
@@ -23,14 +20,15 @@ function Contact() {
 
   return (
     <div className={cs.ll}>
-      {clothes.map((clothes) => (
-        <div key={clothes.id} className={cs.card}>
-          <img className={cs.im} src={clothes.image} alt="" />
-          <h1>{clothes.title}</h1>
-          <h1>{clothes.description}</h1>
-          <h3>{clothes.price}</h3>
-          <button onClick={touched} className={cs.btn}>
-            Buy nows
+      {clothes.map((item) => (
+        <div key={item.id} className={cs.card}>
+          <img className={cs.im} src={item.image} alt="" />
+          <h1>{item.title}</h1>
+          <h1>{item.description}</h1>
+          <h3>{item.price}</h3>
+
+          <button onClick={() => addToCart(item)} className={cs.btn}>
+            Order
           </button>
         </div>
       ))}

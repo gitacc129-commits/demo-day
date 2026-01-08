@@ -15,18 +15,22 @@ export default function CartPage() {
 
   return (
     <div className={sh.ll}>
-      {cart.map((item, index) => (
-        <div key={index} className={sh.card}>
-          <img className={sh.img} src={item.image} alt="" />
-          <h1>{item.title}</h1>
-          <p>{item.description}</p>
-          <h1>{item.price}</h1>
+      {cart.map((item, index) => {
+        if (!item) return null;
 
-          <button onClick={order} className={sh.btn}>
-            Order now
-          </button>
-        </div>
-      ))}
+        return (
+          <div key={index} className={sh.card}>
+            <img className={sh.img} src={item.image} alt="" />
+            <h1>{item.title}</h1>
+            <p>{item.description}</p>
+            <h1>{item.price}</h1>
+
+            <button onClick={order} className={sh.btn}>
+              Order now
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 }

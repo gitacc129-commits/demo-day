@@ -65,7 +65,7 @@ function Page() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Title */}
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-500">
               Why Choose Our Shop?
             </h2>
             <p className="mt-4 text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
@@ -130,7 +130,10 @@ function Page() {
             </p>
           </div>
 
-          <button className="mt-6 md:mt-0 bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition">
+          <button
+            onClick={goShop}
+            className="mt-6 md:mt-0 bg-white text-indigo-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition"
+          >
             Shop Now
           </button>
         </div>
