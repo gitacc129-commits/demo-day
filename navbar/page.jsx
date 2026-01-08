@@ -4,7 +4,7 @@ import st from "./navbar.module.css";
 import { React } from "react";
 
 import { useTheme } from "@/app/ThemeContext/page";
-import { useCart } from "@/app/Cart-Context/page";
+import { useCart } from "@/app/CartContext/page";
 
 function Navbar() {
   const { dark, toggleTheme } = useTheme();

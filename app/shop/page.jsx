@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import sh from "./shop.module.css";
-import { useCart } from "../Cart-Context/page";
+import { useCart } from "../CartContext/page";
 
 function Shop() {
   const [shoes, setShoes] = useState([]);

@@ -46,7 +46,7 @@ function Page() {
         </div>
       </section>
 
-      <section>
+      <section className="sc9">
         <div className="st2">
           <h1 className="h11">Future Products</h1>
           <div className="card-dady">

@@ -197,11 +197,43 @@
   transition: background-color 1.3s ease, color 1.3s ease;
 }
 
-@keyframes scroll {
-  from {
-    transform: translateX(0);
+@media (max-width: 768px) {
+  .sc {
+    padding: 40px 20px;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: translateX(-120%);
+
+  .wl {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img {
+    width: 199px;
+    max-height: 280px;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .sc9 {
+    .products {
+      display: flex;
+      flex-wrap: wrap; /* pastga tushishi uchun */
+      gap: 24px; /* cardlar orasidagi bo‘shliq */
+      justify-content: flex-start; /* chapdan boshlash */
+      padding: 20px;
+    }
+    .card {
+      flex: 1 1 45%; /* 2 ta pastga tushadi */
+    }
   }
 }

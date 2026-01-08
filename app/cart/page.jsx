@@ -1,5 +1,5 @@
 "use client";
-import { useCart } from "../Cart-Context/page";
+import { useCart } from "../CartContext/page";
 import sh from "../shop/shop.module.css";
 
 export default function CartPage() {
