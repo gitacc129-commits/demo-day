@@ -3,8 +3,8 @@ import Link from "next/link";
 import st from "./navbar.module.css";
 import { React } from "react";
 
-import { useTheme } from "@/app/ThemeContext/page";
-import { useCart } from "@/app/CartContext/page";
+import { useTheme } from "@/ThemeContext/page";
+import { useCart } from "@/CartContext/page";
 
 function Navbar() {
   const { dark, toggleTheme } = useTheme();
